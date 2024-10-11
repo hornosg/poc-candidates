@@ -1,0 +1,1 @@
+INSERT INTO user (id, password, email) VALUES (UUID(), 'password', 'test@example.com');
