@@ -1,0 +1,2367 @@
+{
+	"info": {
+		"_postman_id": "2e8924e5-991a-4157-b123-4168b1032091",
+		"name": "API de Candidatos",
+		"description": "API para gestionar candidatos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25856024",
+		"_collection_link": "https://cloudy-shuttle-558096.postman.co/workspace/Kali~e83ab900-4794-4853-8530-f8d4ff6dcb88/collection/25856024-2e8924e5-991a-4157-b123-4168b1032091?action=share&source=collection_link&creator=25856024"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "candidate",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Obtener un candidateo",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) ID del candidateo"
+												}
+											]
+										},
+										"description": "Obtiene un candidateo específico por su ID"
+									},
+									"response": [
+										{
+											"name": "Candidateo obtenido exitosamente",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"createdAt\": \"<dateTime>\"\n}"
+										},
+										{
+											"name": "Request has missing or invalid information",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"createdAt\": \"<dateTime>\"\n}"
+										},
+										{
+											"name": "Invalid authentication error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"createdAt\": \"<dateTime>\"\n}"
+										},
+										{
+											"name": "User not authorized for using this operation",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"createdAt\": \"<dateTime>\"\n}"
+										},
+										{
+											"name": "Candidateo no encontrado",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"createdAt\": \"<dateTime>\"\n}"
+										},
+										{
+											"name": "Internal error at request processing time",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"createdAt\": \"<dateTime>\"\n}"
+										},
+										{
+											"name": "Service is temporally not available",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Service Unavailable",
+											"code": 503,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"createdAt\": \"<dateTime>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Update an existing candidate",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Updates an existing candidate with the provided details"
+									},
+									"response": [
+										{
+											"name": "Candidate updated successfully",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "405 METHOD_NOT_ALLOWED"
+										},
+										{
+											"name": "Request has missing or invalid information",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "405 METHOD_NOT_ALLOWED"
+										},
+										{
+											"name": "Invalid authentication error",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "405 METHOD_NOT_ALLOWED"
+										},
+										{
+											"name": "User not authorized for using this operation",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "405 METHOD_NOT_ALLOWED"
+										},
+										{
+											"name": "The resource was not found",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "405 METHOD_NOT_ALLOWED"
+										},
+										{
+											"name": "Internal error at request processing time",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "405 METHOD_NOT_ALLOWED"
+										},
+										{
+											"name": "Service is temporally not available",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Service Unavailable",
+											"code": 503,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "405 METHOD_NOT_ALLOWED"
+										}
+									]
+								},
+								{
+									"name": "Delete a candidate",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Deletes a candidate with the specified ID"
+									},
+									"response": [
+										{
+											"name": "Candidate deleted successfully",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Request has missing or invalid information",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Invalid authentication error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "User not authorized for using this operation",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "The resource was not found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Internal error at request processing time",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Service is temporally not available",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/candidate/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"candidate",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Service Unavailable",
+											"code": 503,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Listar candidatos",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/candidate?name=<string>&email=<string>&gender=<string>&city=<string>&state=<string>&country=<string>&status=<string>&createdFrom=<date>&createdTo=<date>&page=0&size=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"candidate"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "<string>",
+											"description": "Filtro por nombre del candidateo"
+										},
+										{
+											"key": "email",
+											"value": "<string>",
+											"description": "Filtro por email del candidateo"
+										},
+										{
+											"key": "gender",
+											"value": "<string>",
+											"description": "Filtro por género del candidateo"
+										},
+										{
+											"key": "city",
+											"value": "<string>",
+											"description": "Filtro por ciudad del candidateo"
+										},
+										{
+											"key": "state",
+											"value": "<string>",
+											"description": "Filtro por estado del candidateo"
+										},
+										{
+											"key": "country",
+											"value": "<string>",
+											"description": "Filtro por país del candidateo"
+										},
+										{
+											"key": "status",
+											"value": "<string>",
+											"description": "Filtro por estado del candidateo"
+										},
+										{
+											"key": "createdFrom",
+											"value": "<date>",
+											"description": "Filtro por fecha de creación desde"
+										},
+										{
+											"key": "createdTo",
+											"value": "<date>",
+											"description": "Filtro por fecha de creación hasta"
+										},
+										{
+											"key": "page",
+											"value": "0",
+											"description": "Número de página"
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"description": "Tamaño de página"
+										}
+									]
+								},
+								"description": "Obtiene un listado de candidatos con filtros opcionales y paginación"
+							},
+							"response": [
+								{
+									"name": "Listado de candidatos obtenido exitosamente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate?name=<string>&email=<string>&gender=<string>&city=<string>&state=<string>&country=<string>&status=<string>&createdFrom=<date>&createdTo=<date>&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Filtro por nombre del candidateo"
+												},
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "Filtro por email del candidateo"
+												},
+												{
+													"key": "gender",
+													"value": "<string>",
+													"description": "Filtro por género del candidateo"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Filtro por ciudad del candidateo"
+												},
+												{
+													"key": "state",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "country",
+													"value": "<string>",
+													"description": "Filtro por país del candidateo"
+												},
+												{
+													"key": "status",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "createdFrom",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación desde"
+												},
+												{
+													"key": "createdTo",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación hasta"
+												},
+												{
+													"key": "page",
+													"value": "0",
+													"description": "Número de página"
+												},
+												{
+													"key": "size",
+													"value": "10",
+													"description": "Tamaño de página"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"candidates\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    }\n  ],\n  \"currentPage\": \"<integer>\",\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"size\": \"<integer>\"\n}"
+								},
+								{
+									"name": "Request has missing or invalid information",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate?name=<string>&email=<string>&gender=<string>&city=<string>&state=<string>&country=<string>&status=<string>&createdFrom=<date>&createdTo=<date>&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Filtro por nombre del candidateo"
+												},
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "Filtro por email del candidateo"
+												},
+												{
+													"key": "gender",
+													"value": "<string>",
+													"description": "Filtro por género del candidateo"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Filtro por ciudad del candidateo"
+												},
+												{
+													"key": "state",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "country",
+													"value": "<string>",
+													"description": "Filtro por país del candidateo"
+												},
+												{
+													"key": "status",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "createdFrom",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación desde"
+												},
+												{
+													"key": "createdTo",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación hasta"
+												},
+												{
+													"key": "page",
+													"value": "0",
+													"description": "Número de página"
+												},
+												{
+													"key": "size",
+													"value": "10",
+													"description": "Tamaño de página"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"candidates\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    }\n  ],\n  \"currentPage\": \"<integer>\",\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"size\": \"<integer>\"\n}"
+								},
+								{
+									"name": "Invalid authentication error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate?name=<string>&email=<string>&gender=<string>&city=<string>&state=<string>&country=<string>&status=<string>&createdFrom=<date>&createdTo=<date>&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Filtro por nombre del candidateo"
+												},
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "Filtro por email del candidateo"
+												},
+												{
+													"key": "gender",
+													"value": "<string>",
+													"description": "Filtro por género del candidateo"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Filtro por ciudad del candidateo"
+												},
+												{
+													"key": "state",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "country",
+													"value": "<string>",
+													"description": "Filtro por país del candidateo"
+												},
+												{
+													"key": "status",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "createdFrom",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación desde"
+												},
+												{
+													"key": "createdTo",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación hasta"
+												},
+												{
+													"key": "page",
+													"value": "0",
+													"description": "Número de página"
+												},
+												{
+													"key": "size",
+													"value": "10",
+													"description": "Tamaño de página"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"candidates\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    }\n  ],\n  \"currentPage\": \"<integer>\",\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"size\": \"<integer>\"\n}"
+								},
+								{
+									"name": "User not authorized for using this operation",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate?name=<string>&email=<string>&gender=<string>&city=<string>&state=<string>&country=<string>&status=<string>&createdFrom=<date>&createdTo=<date>&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Filtro por nombre del candidateo"
+												},
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "Filtro por email del candidateo"
+												},
+												{
+													"key": "gender",
+													"value": "<string>",
+													"description": "Filtro por género del candidateo"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Filtro por ciudad del candidateo"
+												},
+												{
+													"key": "state",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "country",
+													"value": "<string>",
+													"description": "Filtro por país del candidateo"
+												},
+												{
+													"key": "status",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "createdFrom",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación desde"
+												},
+												{
+													"key": "createdTo",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación hasta"
+												},
+												{
+													"key": "page",
+													"value": "0",
+													"description": "Número de página"
+												},
+												{
+													"key": "size",
+													"value": "10",
+													"description": "Tamaño de página"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"candidates\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    }\n  ],\n  \"currentPage\": \"<integer>\",\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"size\": \"<integer>\"\n}"
+								},
+								{
+									"name": "The resource was not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate?name=<string>&email=<string>&gender=<string>&city=<string>&state=<string>&country=<string>&status=<string>&createdFrom=<date>&createdTo=<date>&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Filtro por nombre del candidateo"
+												},
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "Filtro por email del candidateo"
+												},
+												{
+													"key": "gender",
+													"value": "<string>",
+													"description": "Filtro por género del candidateo"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Filtro por ciudad del candidateo"
+												},
+												{
+													"key": "state",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "country",
+													"value": "<string>",
+													"description": "Filtro por país del candidateo"
+												},
+												{
+													"key": "status",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "createdFrom",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación desde"
+												},
+												{
+													"key": "createdTo",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación hasta"
+												},
+												{
+													"key": "page",
+													"value": "0",
+													"description": "Número de página"
+												},
+												{
+													"key": "size",
+													"value": "10",
+													"description": "Tamaño de página"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"candidates\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    }\n  ],\n  \"currentPage\": \"<integer>\",\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"size\": \"<integer>\"\n}"
+								},
+								{
+									"name": "Internal error at request processing time",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate?name=<string>&email=<string>&gender=<string>&city=<string>&state=<string>&country=<string>&status=<string>&createdFrom=<date>&createdTo=<date>&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Filtro por nombre del candidateo"
+												},
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "Filtro por email del candidateo"
+												},
+												{
+													"key": "gender",
+													"value": "<string>",
+													"description": "Filtro por género del candidateo"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Filtro por ciudad del candidateo"
+												},
+												{
+													"key": "state",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "country",
+													"value": "<string>",
+													"description": "Filtro por país del candidateo"
+												},
+												{
+													"key": "status",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "createdFrom",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación desde"
+												},
+												{
+													"key": "createdTo",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación hasta"
+												},
+												{
+													"key": "page",
+													"value": "0",
+													"description": "Número de página"
+												},
+												{
+													"key": "size",
+													"value": "10",
+													"description": "Tamaño de página"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"candidates\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    }\n  ],\n  \"currentPage\": \"<integer>\",\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"size\": \"<integer>\"\n}"
+								},
+								{
+									"name": "Service is temporally not available",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate?name=<string>&email=<string>&gender=<string>&city=<string>&state=<string>&country=<string>&status=<string>&createdFrom=<date>&createdTo=<date>&page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "Filtro por nombre del candidateo"
+												},
+												{
+													"key": "email",
+													"value": "<string>",
+													"description": "Filtro por email del candidateo"
+												},
+												{
+													"key": "gender",
+													"value": "<string>",
+													"description": "Filtro por género del candidateo"
+												},
+												{
+													"key": "city",
+													"value": "<string>",
+													"description": "Filtro por ciudad del candidateo"
+												},
+												{
+													"key": "state",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "country",
+													"value": "<string>",
+													"description": "Filtro por país del candidateo"
+												},
+												{
+													"key": "status",
+													"value": "<string>",
+													"description": "Filtro por estado del candidateo"
+												},
+												{
+													"key": "createdFrom",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación desde"
+												},
+												{
+													"key": "createdTo",
+													"value": "<date>",
+													"description": "Filtro por fecha de creación hasta"
+												},
+												{
+													"key": "page",
+													"value": "0",
+													"description": "Número de página"
+												},
+												{
+													"key": "size",
+													"value": "10",
+													"description": "Tamaño de página"
+												}
+											]
+										}
+									},
+									"status": "Service Unavailable",
+									"code": 503,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"candidates\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"email\": \"<string>\",\n      \"gender\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"country\": \"<string>\",\n      \"linkedin\": \"<string>\",\n      \"github\": \"<string>\",\n      \"salaryExpected\": \"<string>\",\n      \"status\": \"<string>\",\n      \"comments\": \"<string>\",\n      \"createdAt\": \"<dateTime>\"\n    }\n  ],\n  \"currentPage\": \"<integer>\",\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"size\": \"<integer>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Create a new candidate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/candidate",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"candidate"
+									]
+								},
+								"description": "Creates a new candidate with the provided details"
+							},
+							"response": [
+								{
+									"name": "Candidate created successfully",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "405 METHOD_NOT_ALLOWED"
+								},
+								{
+									"name": "Request has missing or invalid information",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "405 METHOD_NOT_ALLOWED"
+								},
+								{
+									"name": "Invalid authentication error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "405 METHOD_NOT_ALLOWED"
+								},
+								{
+									"name": "User not authorized for using this operation",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "405 METHOD_NOT_ALLOWED"
+								},
+								{
+									"name": "The resource was not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "405 METHOD_NOT_ALLOWED"
+								},
+								{
+									"name": "Internal error at request processing time",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "405 METHOD_NOT_ALLOWED"
+								},
+								{
+									"name": "Service is temporally not available",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"country\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"github\": \"<string>\",\n  \"salaryExpected\": \"<string>\",\n  \"status\": \"<string>\",\n  \"comments\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/candidate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"candidate"
+											]
+										}
+									},
+									"status": "Service Unavailable",
+									"code": 503,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "405 METHOD_NOT_ALLOWED"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "login",
+							"item": [
+								{
+									"name": "create Authentication Token",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/auth/login",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"auth",
+														"login"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{bearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}

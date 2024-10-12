@@ -11,6 +11,11 @@ services:
       MYSQL_DATABASE: candidates_db
     volumes:
       - mysql_data:/var/lib/mysql
+    networks:
+      - candidate_network
+
+networks:
+  candidate_network:
 
 volumes:
   mysql_data:

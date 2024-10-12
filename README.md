@@ -16,7 +16,7 @@ Este README proporciona instrucciones detalladas sobre cómo iniciar la aplicaci
 2. Ejecute el siguiente comando para iniciar el contenedor de MySQL:
 
 ```bash
-docker-compose up -d
+docker compose up -d --build
 ```
 
 Este comando iniciará un contenedor de MySQL con las siguientes características:
@@ -75,14 +75,24 @@ http://localhost:8080/swagger-ui.html
 Aquí encontrará una interfaz interactiva que le permitirá explorar y probar todos los endpoints de la API.
 
 ## Notas adicionales
-
-- La aplicación utiliza el puerto 8080 por defecto. Asegúrese de que este puerto esté disponible en su sistema.
 - Los datos de prueba se insertan automáticamente a través de los scripts de migración de Flyway ubicados en `src/main/resources/db/migration`.
-- Si necesita detener la aplicación, puede hacerlo presionando Ctrl+C en la terminal donde se está ejecutando.
 - Para detener y eliminar el contenedor de MySQL, ejecute:
 
 ```bash
 docker-compose down
 ```
 
-Si tiene algún problema o pregunta adicional, no dude en consultar la documentación del proyecto o ponerse en contacto con el equipo de desarrollo.
+### Información de inicio de sesión
+
+Para acceder a la aplicación, utilice las siguientes credenciales:
+- **Email:** test@example.com
+- **Contraseña:** password
+
+## Descarga de la Colección de Postman
+
+Para facilitar las pruebas de la API, hemos incluido una colección de Postman que puede descargar y utilizar. La colección se encuentra en el siguiente archivo:
+
+```
+src/main/resources/API de Candidatos.postman_collection.json
+```
+
